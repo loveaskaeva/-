@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Интернет-магазин стильных сумок - широкий выбор женских и мужских сумок, рюкзаков и аксессуаров">
+  <title>BagShop - Интернет-магазин сумок</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Фиксированная навигация -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <h2>👜 BagShop</h2>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Главная</a></li>
+        <li><a href="#catalog" class="nav-link">Каталог</a></li>
+        <li><a href="#about" class="nav-link">О нас</a></li>
+        <li><a href="#contact" class="nav-link">Контакты</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#search" class="nav-icon">🔍</a>
+        <a href="#cart" class="nav-icon">🛒 <span class="cart-count">3</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Главная секция -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Стильные сумки для <span class="accent">каждого дня</span></h1>
+        <p class="hero-description">
+          Откройте для себя коллекцию премиальных сумок, созданных с любовью к деталям и качеству
+        </p>
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn btn-primary">Смотреть каталог</a>
+          <a href="#about" class="btn btn-secondary">Узнать больше</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-bag-showcase">
+          <div class="bag-card featured">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop" alt="Кожаная сумка">
+            <div class="bag-info">
+              <h3>Кожаная сумка Premium</h3>
+              <p class="price">15 990 ₽</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Категории -->
+  <section class="categories">
+    <div class="container">
+      <h2 class="section-title">Популярные категории</h2>
+      <div class="categories-grid">
+        <div class="category-card">
+          <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=400&h=300&fit=crop" alt="Женские сумки">
+          </div>
+          <div class="category-info">
+            <h3>Женские сумки</h3>
+            <p>Элегантные модели для любого случая</p>
+            <span class="category-count">120+ товаров</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=300&fit=crop" alt="Мужские сумки">
+          </div>
+          <div class="category-info">
+            <h3>Мужские сумки</h3>
+            <p>Стильные и практичные решения</p>
+            <span class="category-count">80+ товаров</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=400&h=300&fit=crop" alt="Рюкзаки">
+          </div>
+          <div class="category-info">
+            <h3>Рюкзаки</h3>
+            <p>Удобство и комфорт каждый день</p>
+            <span class="category-count">60+ товаров</span>
+          </div>
+        </div>
+        <div class="category-card">
+          <div class="category-image">
+            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=400&h=300&fit=crop" alt="Клатчи">
+          </div>
+          <div class="category-info">
+            <h3>Клатчи</h3>
+            <p>Изысканные аксессуары для вечера</p>
+            <span class="category-count">40+ товаров</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Каталог товаров -->
+  <section id="catalog" class="catalog">
+    <div class="container">
+      <h2 class="section-title">Популярные товары</h2>
+      
+      <!-- Фильтры -->
+      <div class="filters">
+        <div class="filter-group">
+          <label>Категория:</label>
+          <select class="filter-select">
+            <option>Все категории</option>
+            <option>Женские сумки</option>
+            <option>Мужские сумки</option>
+            <option>Рюкзаки</option>
+            <option>Клатчи</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Цена:</label>
+          <select class="filter-select">
+            <option>Любая цена</option>
+            <option>До 5 000 ₽</option>
+            <option>5 000 - 15 000 ₽</option>
+            <option>15 000 - 30 000 ₽</option>
+            <option>От 30 000 ₽</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label>Материал:</label>
+          <select class="filter-select">
+            <option>Любой материал</option>
+            <option>Натуральная кожа</option>
+            <option>Экокожа</option>
+            <option>Текстиль</option>
+            <option>Замша</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Сетка товаров -->
+      <div class="products-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=300&h=300&fit=crop" alt="Кожаная сумка-тоут">
+            <div class="product-badges">
+              <span class="badge new">Новинка</span>
+            </div>
+            <div class="product-actions">
+              <button class="action-btn">❤️</button>
+              <button class="action-btn">👁️</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Кожаная сумка-тоут</h3>
+            <p class="product-description">Элегантная сумка из натуральной кожи</p>
+            <div class="product-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-count">(24)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">12 990 ₽</span>
+              <span class="old-price">15 990 ₽</span>
+            </div>
+            <button class="btn btn-primary btn-full">В корзину</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=300&h=300&fit=crop" alt="Мужская кожаная сумка">
+            <div class="product-badges">
+              <span class="badge sale">-20%</span>
+            </div>
+            <div class="product-actions">
+              <button class="action-btn">❤️</button>
+              <button class="action-btn">👁️</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Мужская кожаная сумка</h3>
+            <p class="product-description">Стильная сумка для деловых встреч</p>
+            <div class="product-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-count">(18)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">18 990 ₽</span>
+              <span class="old-price">23 990 ₽</span>
+            </div>
+            <button class="btn btn-primary btn-full">В корзину</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1581605405669-fcdf81165afa?w=300&h=300&fit=crop" alt="Городской рюкзак">
+            <div class="product-actions">
+              <button class="action-btn">❤️</button>
+              <button class="action-btn">👁️</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Городской рюкзак</h3>
+            <p class="product-description">Удобный рюкзак для повседневного использования</p>
+            <div class="product-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-count">(31)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">8 990 ₽</span>
+            </div>
+            <button class="btn btn-primary btn-full">В корзину</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1566150905458-1bf1fc113f0d?w=300&h=300&fit=crop" alt="Вечерний клатч">
+            <div class="product-badges">
+              <span class="badge premium">Premium</span>
+            </div>
+            <div class="product-actions">
+              <button class="action-btn">❤️</button>
+              <button class="action-btn">👁️</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Вечерний клатч</h3>
+            <p class="product-description">Изысканный клатч для особых случаев</p>
+            <div class="product-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-count">(12)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">25 990 ₽</span>
+            </div>
+            <button class="btn btn-primary btn-full">В корзину</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=300&h=300&fit=crop" alt="Спортивная сумка">
+            <div class="product-actions">
+              <button class="action-btn">❤️</button>
+              <button class="action-btn">👁️</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Спортивная сумка</h3>
+            <p class="product-description">Практичная сумка для тренировок</p>
+            <div class="product-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-count">(27)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">6 990 ₽</span>
+            </div>
+            <button class="btn btn-primary btn-full">В корзину</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=300&h=300&fit=crop" alt="Женская сумка через плечо">
+            <div class="product-badges">
+              <span class="badge bestseller">Хит продаж</span>
+            </div>
+            <div class="product-actions">
+              <button class="action-btn">❤️</button>
+              <button class="action-btn">👁️</button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3>Сумка через плечо</h3>
+            <p class="product-description">Компактная сумка для прогулок</p>
+            <div class="product-rating">
+              <span class="stars">⭐⭐⭐⭐⭐</span>
+              <span class="rating-count">(45)</span>
+            </div>
+            <div class="product-price">
+              <span class="current-price">9 990 ₽</span>
+            </div>
+            <button class="btn btn-primary btn-full">В корзину</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="catalog-actions">
+        <button class="btn btn-secondary">Показать еще</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- О нас -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">Почему выбирают нас</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>Качество превыше всего</h3>
+          <p>
+            Мы тщательно отбираем каждую сумку в нашем каталоге. Работаем только с проверенными 
+            производителями, которые используют качественные материалы и современные технологии.
+          </p>
+          <ul class="features-list">
+            <li>Натуральная кожа высшего качества</li>
+            <li>Прочная и надежная фурнитура</li>
+            <li>Современный дизайн и актуальные тренды</li>
+            <li>Гарантия качества на все товары</li>
+            <li>Быстрая доставка по всей России</li>
+          </ul>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <h4 class="stat-number">5000+</h4>
+            <p class="stat-label">Довольных покупателей</p>
+          </div>
+          <div class="stat-item">
+            <h4 class="stat-number">300+</h4>
+            <p class="stat-label">Моделей в каталоге</p>
+          </div>
+          <div class="stat-item">
+            <h4 class="stat-number">3</h4>
+            <p class="stat-label">Года на рынке</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="advantages">
+    <div class="container">
+      <div class="advantages-grid">
+        <div class="advantage-item">
+          <div class="advantage-icon">🚚</div>
+          <h3>Быстрая доставка</h3>
+          <p>Доставляем по Москве в день заказа, по России - от 1 до 3 дней</p>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-icon">🔄</div>
+          <h3>Легкий возврат</h3>
+          <p>30 дней на возврат товара без объяснения причин</p>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-icon">🛡️</div>
+          <h3>Гарантия качества</h3>
+          <p>Официальная гарантия производителя на все товары</p>
+        </div>
+        <div class="advantage-item">
+          <div class="advantage-icon">💳</div>
+          <h3>Удобная оплата</h3>
+          <p>Наличными, картой, рассрочка 0% или онлайн-переводом</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Контакты и доставка</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Свяжитесь с нами</h3>
+          <p>Мы всегда готовы помочь с выбором и ответить на ваши вопросы</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <strong>📞 Телефон:</strong>
+              <span>+7 (495) 123-45-67</span>
+            </div>
+            <div class="contact-item">
+              <strong>📧 Email:</strong>
+              <span>info@bagshop.ru</span>
+            </div>
+            <div class="contact-item">
+              <strong>📍 Адрес:</strong>
+              <span>Москва, ул. Тверская, 15</span>
+            </div>
+            <div class="contact-item">
+              <strong>🕒 Режим работы:</strong>
+              <span>Пн-Вс: 10:00 - 22:00</span>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Имя *</label>
+            <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+          </div>
+          <div class="form-group">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="example@email.com">
+          </div>
+          <div class="form-group">
+            <label for="phone">Телефон</label>
+            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+          </div>
+          <div class="form-group">
+            <label for="subject">Тема обращения</label>
+            <select id="subject" name="subject">
+              <option value="">Выберите тему</option>
+              <option value="order">Вопрос по заказу</option>
+              <option value="product">Вопрос о товаре</option>
+              <option value="delivery">Доставка</option>
+              <option value="return">Возврат/обмен</option>
+              <option value="other">Другое</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Сообщение *</label>
+            <textarea id="message" name="message" required placeholder="Опишите ваш вопрос..."></textarea>
+          </div>
+          <div class="form-group checkbox-group">
+            <input type="checkbox" id="agreement" name="agreement" required>
+            <label for="agreement">Я согласен с обработкой персональных данных</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Отправить сообщение</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Футер -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>👜 BagShop</h4>
+          <p>Интернет-магазин стильных сумок и аксессуаров премиум-качества</p>
+          <div class="social-links">
+            <a href="#" class="social-link">📘</a>
+            <a href="#" class="social-link">📷</a>
+            <a href="#" class="social-link">🐦</a>
+            <a href="#" class="social-link">📺</a>
+          </div>
+        </div>
+        <div class="footer-section">
+          <h4>Каталог</h4>
+          <ul>
+            <li><a href="#catalog">Женские сумки</a></li>
+            <li><a href="#catalog">Мужские сумки</a></li>
+            <li><a href="#catalog">Рюкзаки</a></li>
+            <li><a href="#catalog">Клатчи</a></li>
+            <li><a href="#catalog">Аксессуары</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Информация</h4>
+          <ul>
+            <li><a href="#about">О компании</a></li>
+            <li><a href="#delivery">Доставка и оплата</a></li>
+            <li><a href="#returns">Возврат и обмен</a></li>
+            <li><a href="#warranty">Гарантия</a></li>
+            <li><a href="#care">Уход за изделиями</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Контакты</h4>
+          <p>📞 +7 (495) 123-45-67</p>
+          <p>📧 info@bagshop.ru</p>
+          <p>📍 Москва, ул. Тверская, 15</p>
+          <p>🕒 Пн-Вс: 10:00 - 22:00</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 BagShop. Все права защищены.</p>
+        <div class="footer-links">
+          <a href="#privacy">Политика конфиденциальности</a>
+          <a href="#terms">Пользовательское соглашение</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
